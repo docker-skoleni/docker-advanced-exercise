@@ -1,4 +1,4 @@
-FROM fedora
+FROM docker.io/dockerskoleni/fedora
 
 COPY ./trap-example.sh /trap-example.sh
 RUN chmod +x /trap-example.sh

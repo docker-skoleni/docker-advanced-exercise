@@ -16,18 +16,18 @@ Notes:
 #### Assigning cpus to containers
 
   * Fully load single CPU core of your choice
-    * `docker run -it --rm progrium/stress --cpu 1`
+    * `docker run -it --rm docker.io/dockerskoleni/stress --cpu 1`
     * Verify that only one core is under load
   * Run container again but load both cpus
-    * `docker run -it --rm progrium/stress --cpu 2`
+    * `docker run -it --rm docker.io/dockerskoleni/stress --cpu 2`
   * Modify CPUs that container can access directly in `/sys/fs/cgroup/`
 
 #### Sharing cpu resources between contianers
 
   * Run 2 containers, 1 with cpushare 1024, second with 2048
     * observe how much resources each container consumes
-    * `docker run -c 1024 -d progrium/stress --cpu 2`
-    * `docker run -c 2048 -d progrium/stress --cpu 2`
+    * `docker run -c 1024 -d docker.io/dockerskoleni/stress --cpu 2`
+    * `docker run -c 2048 -d docker.io/dockerskoleni/stress --cpu 2`
   * Ensure that container won't consume more CPU resources than specified no matter if its the only container on the host
     * See `cpushare` and `cpuquota`
   * Experiment with multiple containers

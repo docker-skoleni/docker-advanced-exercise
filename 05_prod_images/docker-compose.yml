@@ -2,14 +2,14 @@ version: '2'
 services:
   postgres:
     container_name: clair_postgres
-    image: postgres:latest
+    image: docker.io/dockerskoleni/postgres:latest
     restart: unless-stopped
     environment:
       POSTGRES_PASSWORD: password
 
   clair:
     container_name: clair_clair
-    image: quay.io/coreos/clair:latest
+    image: docker.io/dockerskoleni/clair:latest
     restart: unless-stopped
     depends_on:
       - postgres

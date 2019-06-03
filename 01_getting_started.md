@@ -121,5 +121,5 @@ docker ps
 ## Running first container
 
 ```
-docker run hello-world
+docker run docker.io/dockerskoleni/hello-world
 ```
