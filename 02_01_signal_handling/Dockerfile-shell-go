@@ -1,4 +1,4 @@
-FROM golang:1.11 as builder
+FROM docker.io/dockerskoleni/golang:1.11 as builder
 
 ARG  CMD=plain
 WORKDIR /go/src/app

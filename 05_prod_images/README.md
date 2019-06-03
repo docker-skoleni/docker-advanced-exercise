@@ -53,8 +53,8 @@ Download release from [project release page](https://github.com/arminc/clair-sca
 #### Scan image and print report ####
 
 ```
-docker pull nginx:1.11.6-alpine
-./clair-scanner -c http://$(docker-machine ip):6060 --ip=<LOCAL_IP> -r report.json nginx:1.11.6-alpine
+docker pull docker.io/dockerskoleni/nginx:1.11.6-alpine
+./clair-scanner -c http://$(docker-machine ip):6060 --ip=<LOCAL_IP> -r report.json docker.io/dockerskoleni/nginx:1.11.6-alpine
 ```
 
 ## Labeling Docker objects ##
